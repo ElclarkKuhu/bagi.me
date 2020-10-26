@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 * {
+    font-family: 'Noto Sans', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -49,7 +52,68 @@ body {
 .center-row {
     display: flex;
 
-    flex-direction:row;
     justify-content: center;
     align-items: center;
+}
+
+input {
+    background-color: transparent;
+    color: white;
+
+    font-size: large;
+
+    border: 0;
+    border-radius: 0;
+    border-bottom: solid 2px #fff;
+
+    margin: 10px 0;
+    width: 100%;
+    padding: 5px 0px;
+
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: 0;
+
+    border-bottom: solid 2px #3282b8;
+
+    transition: all 0.2s;
+}
+
+input:hover {
+    outline: 0;
+
+    border-bottom: solid 2px #3282b8;
+
+    transition: all 0.2s;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+
+    background: transparent;
+    color: white;
+
+    border: 0;
+    border-bottom: solid 2px #fff;
+    border-radius: 0;
+
+    transition: all 0.2s;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:hover {
+    border: 0;
+    border-bottom: solid 2px #3282b8;
+    color: #3282b8;
+
+    transition: all 0.2s;
+
+    cursor: pointer;
 }

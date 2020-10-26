@@ -21,10 +21,10 @@ function getUID(hash) {
 
 function getData(uid) {
     firebase.database().ref('data/' + uid).once('value', snapshot => {
-        if (snapshot.hasChild("username") && snapshot.hasChild("pesan") && snapshot.hasChild("photoURL")) {
+        if (snapshot.hasChild("username") && snapshot.hasChild("photoURL")) {
             document.getElementById("photoURL").src = snapshot.val().photoURL;
             document.getElementById("nama").innerHTML = snapshot.val().username;
-            document.getElementById("pesan").innerHTML = snapshot.val().pesan;
+            //document.getElementById("pesan").innerHTML = snapshot.val().pesan;
         } else {
             window.location.replace('404.html')
         }
