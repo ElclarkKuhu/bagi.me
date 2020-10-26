@@ -1,20 +1,11 @@
 const functions = require('firebase-functions');
+const admin = require('firebase-admin');
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+exports.setupURL = functions.database.ref('/data/{user_id}/url')
+    .onCreate((snapshot, context) => {
+      // Grab the current value of what was written to the Realtime Database.
+      const url = snapshot.val();
+      create
+      return functions.database.ref('uids/' + url + '/uid').set(snapshot.ref.parent.key);
+    });
 
-// Saves a message to the Firebase Realtime Database but sanitizes the text by removing swearwords.
-exports.addMessage = functions.https.onCall((data, context) => {
-    // Message text passed from the client.
-    const text = data.url;
-    // Authentication / user information is automatically added to the request.
-    const uid = context.auth.uid;
-    const name = context.auth.token.name || null;
-    const picture = context.auth.token.picture || null;
-    const email = context.auth.token.email || null;
-});

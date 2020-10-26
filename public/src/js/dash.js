@@ -12,11 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var uid = user.uid;
             var providerData = user.providerData;
 
-            if (checkData(uid)) {
-                updateData(photoURL)
-            } else {
-                window.location.replace("/setup")
-            }
+            checkData(uid)
         } else {
             // user not singed in
             window.location.replace("/login")
@@ -24,20 +20,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-async function checkData(uid) {
-    var re = false;
+function checkData(uid) {
     firebase.database().ref('data/' + uid).once('value', snapshot => {
         if (snapshot.hasChild('url')) {
             firebase.database().ref('uids').once('value' , snapshot2 => {
-                if (snapshot2.hasChild(snapshot.val().url)) {
-                    re = true
+                if (!snapshot2.hasChild(snapshot.val().url)) {
+                    window.location.replace('/setup')
                 }
             })
+        } else {
+            window.location.replace('/setup')
         }
     });
-    return re
 }
 
-function updateData() {
-
+function updateData(photoURL, uid) {
+    // TODO
+    /*firebase.database().ref('data/' + uid).updateCh({
+        photoURL : photoURL
+    });*/
 }
