@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
             var uid = user.uid;
             var providerData = user.providerData;
 
+            document.getElementById("nama").innerHTML = displayName;
+            document.getElementById("photoURL").src = photoURL;
+
             checkData(uid)
         } else {
             // user not singed in

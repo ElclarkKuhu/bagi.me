@@ -15,13 +15,17 @@
   </head>
   <body>
     <div class="center-container">
-        <div class="center">
-            <div>
-                <span id="urlname">https://bagi.me/#</span>
-                <input type="url" name="url" id="url" style="width: 15vw;" onchange="fixURL()" oninput="fixURL()" autocomplete="off">
-            </div>
-            <input type="text" name="username" id="username" placeholder="username" autocomplete="off">
-            <button onclick="setup()">Setup</button>
+      <div class="center-bg bg">
+        <h1 style="font-family: 'Fredoka One', cursive; margin-bottom: 5px; font-size: xx-large;">BAGI.ME</h1>
+        <p style="margin-bottom: 10px;">Setup.</p>
+      </div>
+        <div class="center-bg bg">
+          <p id="urlname" style="color: #e94560;">https://bagi.me/</p>
+          <input type="url" name="url" id="url" onchange="fixURL()" oninput="fixURL()" autocomplete="off" placeholder="#url">
+          <input type="text" name="username" id="username" placeholder="username" autocomplete="off">
+        </div>
+        <div class="center-bg bg">
+          <button onclick="setup()">Setup</button>
         </div>
     </div>
 

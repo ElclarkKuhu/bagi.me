@@ -7,7 +7,7 @@ var uid;
 var providerData;
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("urlname").innerHTML = window.location.origin + '/#'
+    document.getElementById("urlname").innerHTML = window.location.origin + '/'
 
     firebase.auth().useDeviceLanguage();
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fixURL() {
-    document.getElementById("url").value = document.getElementById("url").value.replace(/\s+|[,\/&%]/g, "");
+    document.getElementById("url").value = document.getElementById("url").value.replace(/\s+|[,\/&#%]/g, "");
 }
 
 function setup() {

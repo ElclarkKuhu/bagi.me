@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bagi</title>
+    <title>BAGI</title>
 
     <script defer src="/__/firebase/7.24.0/firebase-app.js"></script>
     <script defer src="/__/firebase/7.24.0/firebase-database.js"></script>
@@ -13,9 +13,16 @@
   </head>
   <body>
     <div class="center-container">
-      <img id="photoURL" width="100px" height="100px">
-      <h1 id="nama"></h1>
-      <h2 id="pesan"></h2>
+      <div class="center-bg bg">
+        <img id="photoURL" class="img-profile" src="https://elclark.my.id/assets/img/elclark-square.png">
+        <div style="margin: 5px 10px;">
+          <h1 id="nama">loading...</h1>
+        </div>
+      </div>
+      <div class="center-row bg">
+        <input type="number" placeholder="Rp 10.000" id="jumlah" style="width: 70%; margin-right: 3%;">
+        <button style="width: 25%;">Kirim</button>
+      </div>
     </div>
 
     <script src="src/js/index.js"></script>
