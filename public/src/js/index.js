@@ -24,6 +24,7 @@ function getData(uid) {
         if (snapshot.hasChild("username") && snapshot.hasChild("photoURL")) {
             document.getElementById("photoURL").src = snapshot.val().photoURL;
             document.getElementById("nama").innerHTML = snapshot.val().username;
+            document.title = "BAGI - " + snapshot.val().username;
             //document.getElementById("pesan").innerHTML = snapshot.val().pesan;
         } else {
             window.location.replace('404.html')

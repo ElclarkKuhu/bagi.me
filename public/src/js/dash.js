@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
             var uid = user.uid;
             var providerData = user.providerData;
 
+            document.getElementById("nama").innerHTML = displayName;
+            document.getElementById("photoURL").src = photoURL;
+
             checkData(uid)
         } else {
             // user not singed in
@@ -22,13 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function checkData(uid) {
     firebase.database().ref('data/' + uid).once('value', snapshot => {
-        if (snapshot.hasChild('url')) {
-            firebase.database().ref('uids').once('value' , snapshot2 => {
-                if (!snapshot2.hasChild(snapshot.val().url)) {
-                    window.location.replace('/setup')
-                }
-            })
-        } else {
+        if (!snapshot.hasChild('url')) {
             window.location.replace('/setup')
         }
     });
@@ -39,4 +36,13 @@ function updateData(photoURL, uid) {
     /*firebase.database().ref('data/' + uid).updateCh({
         photoURL : photoURL
     });*/
+}
+
+function keluar() {
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        window.location.replace('/login')
+      }).catch(function(error) {
+        // An error happened.
+      });
 }
