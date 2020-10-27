@@ -6,5 +6,5 @@ exports.setupURL = functions.database.ref('/data/{user_id}/url')
       // Grab the current value of what was written to the Realtime Database.
       const url = snapshot.val();
       console.log('Registering ', url , context.params.pushId);
-      return snapshot.ref.parent.parent.pare.child('uids/' + url + '/uid').set(snapshot.ref.parent.key);
+      return snapshot.ref.parent.parent.parent.child('uids/' + url + '/uid').set(snapshot.ref.parent.key);
     });
