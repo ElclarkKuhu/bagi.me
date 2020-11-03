@@ -27,15 +27,17 @@ function checkData(uid) {
     firebase.database().ref('data/' + uid).once('value', snapshot => {
         if (!snapshot.hasChild('url')) {
             window.location.replace('/setup')
+        } else {
+            document.getElementById("link").innerHTML = 'https://bagi.me/#' + snapshot.val().url;
+            getDonasi(uid)
         }
     });
 }
 
-function updateData(photoURL, uid) {
-    // TODO
-    /*firebase.database().ref('data/' + uid).updateCh({
-        photoURL : photoURL
-    });*/
+function getDonasi(uid) {
+    firebase.database().ref('data/' + uid + '/donasi/nominal').once('value', snapshot => {
+        document.getElementById("donasi").innerHTML = 'Rp.' + snapshot.val();
+    });
 }
 
 function keluar() {
