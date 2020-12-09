@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bagi</title>
+    <title>BAGI - Dashboard</title>
 
-    <script defer src="/__/firebase/7.24.0/firebase-app.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.24.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.1.1/firebase-app.js"></script>
+    <script defer src="/__/firebase/8.1.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.1.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js"></script>
 
     <link rel="stylesheet" href="../src/css/elclark.css">
+    <link rel="stylesheet" href="../src/css/dash.css">
   </head>
   <body>
     <div class="center-container">
@@ -19,10 +20,15 @@
         <div style="margin: 5px 10px;">
           <h1 id="nama">loading...</h1>
         </div>
-        <button id="keluar" onclick="keluar()" style="width: auto; padding: 10px 20px;">KELUAR</button>
       </div>
-      <div class="center-bg bg">
+      <div class="center bg">
+        <div id="donasi">Rp.0</div>
+      </div>
+      <div class="center bg">
+        <div id="link">https://bagi.me/#elclark</div>
         <button>PERBARUI DATA</button>
+        <button>TARIK DONASI</button>
+        <button id="keluar" onclick="keluar()">KELUAR</button>
       </div>
     </div>
 
