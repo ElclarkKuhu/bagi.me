@@ -61,13 +61,13 @@ body {
 
 input {
     background-color: transparent;
-    color: #e94560;
+    color: #ca0000;
 
     font-size: large;
 
     border: 0;
     border-radius: 0;
-    border-bottom: solid 2px #e94560;
+    border-bottom: solid 2px #ca0000;
 
     margin: 10px 0;
     width: 100%;
@@ -95,19 +95,19 @@ input:hover {
 }
 
 ::placeholder {
-    color: #e94560;
+    color: #ca0000;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0;
     
     background: transparent;
-    color: #e94560;
+    color: #ca0000;
 
     border: 0;
-    border: solid #e94560 2px; 
+    border: solid #ca0000 2px; 
     border-radius: 5px; 
 
     transition: all 0.2s;
@@ -130,10 +130,10 @@ button:hover {
 .kirim {
     width: 25%;
 
-    border: solid #e94560 2px; 
+    border: solid #ca0000 2px; 
     border-radius: 5px; 
 
-    color: #e94560; 
+    color: #ca0000; 
     font-weight: bold;
 }
 
@@ -146,7 +146,7 @@ button:hover {
 h1 {
     font-weight: normal;
     font-size: x-large;
-    color: #e94560;
+    color: #ca0000;
 }
 
 .img-profile {
