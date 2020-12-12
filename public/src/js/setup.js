@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             displayName = user.displayName;
             email = user.email;
             emailVerified = user.emailVerified;
-            photoURL = user.photoURL || 'https://elclark.my.id/assets/img/elclark-square.png';
+            photoURL = user.photoURL || '/src/img/bagi.svg';
             isAnonymous = user.isAnonymous;
             uid = user.uid;
             providerData = user.providerData;
