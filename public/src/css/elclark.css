@@ -19,8 +19,8 @@ body {
     width: 100%;
     height: 100%;
 
-    background-color: #1a1a2e;
-    color: #232323;
+    background-color: #16161E;
+    color: #fff;
 }
 
 .center-container {
@@ -158,7 +158,7 @@ h1 {
 }
 
 .bg {
-    background-color: #16213e;
+    background-color: #1A1B26;
     color: #fff;
 
     min-width: 350px;

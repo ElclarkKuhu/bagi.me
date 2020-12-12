@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var displayName = user.displayName;
             var email = user.email;
             var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL || 'https://elclark.my.id/assets/img/elclark-square.png';
+            var photoURL = user.photoURL || '/src/img/bagi.svg';
             var isAnonymous = user.isAnonymous;
             var uid = user.uid;
             var providerData = user.providerData;
@@ -28,7 +28,7 @@ function checkData(uid) {
         if (!snapshot.hasChild('url')) {
             window.location.replace('/setup')
         } else {
-            document.getElementById("link").innerHTML = 'https://bagi.me/#' + snapshot.val().url;
+            document.getElementById("link").innerHTML = window.location.origin + '/#' + snapshot.val().url;
             getDonasi(uid)
         }
     });
@@ -36,7 +36,7 @@ function checkData(uid) {
 
 function getDonasi(uid) {
     firebase.database().ref('data/' + uid + '/donasi/nominal').once('value', snapshot => {
-        document.getElementById("donasi").innerHTML = 'Rp.' + snapshot.val();
+        document.getElementById("donasi").innerHTML = 'Rp ' + numberWithCommas(snapshot.val());
     });
 }
 
@@ -47,4 +47,8 @@ function keluar() {
       }).catch(function(error) {
         // An error happened.
       });
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

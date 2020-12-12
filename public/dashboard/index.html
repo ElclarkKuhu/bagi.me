@@ -3,35 +3,49 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>BAGI - Dashboard</title>
+
+        <link rel="shortcut icon" href="/src/img/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/src/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/src/img/favicon/favicon-googletv.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/src/img/favicon/favicon-128x128.png">
+
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/src/img/favicon/apple-touch-icon-120x120-precomposed.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/img/favicon/apple-touch-icon.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/src/img/favicon/apple-touch-icon-152x152-precomposed.png" type="image/png">
+    
+    <link rel="manifest" href="/src/img/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="/src/css/elclark.css">
+    <link rel="stylesheet" href="/src/css/dash.css">
 
     <script defer src="/__/firebase/8.1.1/firebase-app.js"></script>
     <script defer src="/__/firebase/8.1.1/firebase-auth.js"></script>
     <script defer src="/__/firebase/8.1.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js"></script>
-
-    <link rel="stylesheet" href="../src/css/elclark.css">
-    <link rel="stylesheet" href="../src/css/dash.css">
   </head>
   <body>
     <div class="center-container">
       <div class="center bg">
-        <img id="photoURL" class="img-profile" src="https://elclark.my.id/assets/img/elclark-square.png">
+        <img id="photoURL" class="img-profile" src="/src/img/bagi.svg">
         <div style="margin: 5px 10px;">
-          <h1 id="nama">loading...</h1>
+          <h1 id="nama">BAGI.ME</h1>
         </div>
+        <p id="link">https://elclark.my.id/#link</p>
+        <p id="donasi">Rp 0,00</p>
       </div>
       <div class="center bg">
-        <div id="donasi">Rp.0</div>
-      </div>
-      <div class="center bg">
-        <div id="link">https://bagi.me/#elclark</div>
         <button>PERBARUI DATA</button>
         <button>TARIK DONASI</button>
         <button id="keluar" onclick="keluar()">KELUAR</button>
       </div>
+      <div class="center bg">
+        <span style="font-size: small; color: #ca0000;">&#169;2020 Elclark.</span>
+      </div>
     </div>
-
-    <script src="../src/js/dash.js"></script>
+    <script src="/src/js/dash.js"></script>
   </body>
 </html>

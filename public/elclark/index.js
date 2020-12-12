@@ -9,9 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
             "https://saweria.co/elclark"
         ]
     }
-
-    showMethods(methods)
+    showMethods(methods);
 });
+
+function getMethods() {
+    // TODO
+}
 
 function showMethods(methods) {
     const p1 = "<a href='";
